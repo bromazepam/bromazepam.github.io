@@ -8,8 +8,7 @@ $.getJSON( "https://coronavirus-19-api.herokuapp.com/countries/serbia",
         var recovered = data.recovered;
         var active = data.active;
         var critical = data.critical;
-        var casesPerOneMillion = data.casesPerOneMillion;
-
+        // var casesPerOneMillion = data.casesPerOneMillion;
 
         $(".badge1").append(cases);
         $(".badge2").append(todayCases);
@@ -18,7 +17,8 @@ $.getJSON( "https://coronavirus-19-api.herokuapp.com/countries/serbia",
         $(".badge5").append(recovered);
         $(".badge6").append(active);
         $(".badge7").append(critical);
-        $(".badge8").append(casesPerOneMillion);
+        // $(".badge8").append(casesPerOneMillion);
+
     }
 );
 $.getJSON( "https://coronavirus-19-api.herokuapp.com/all",
@@ -32,4 +32,5 @@ $.getJSON( "https://coronavirus-19-api.herokuapp.com/all",
         $(".badge11").append(deathsInWorld);
     }
 );
+
 
