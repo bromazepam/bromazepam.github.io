@@ -1,6 +1,5 @@
 $.getJSON( "https://corona.lmao.ninja/countries/serbia",
-    function( data ) {
-        console.log(data);
+    function( data ) {      
         var cases = data.cases;
         var todayCases = data.todayCases;
         var deaths = data.deaths;
@@ -8,7 +7,6 @@ $.getJSON( "https://corona.lmao.ninja/countries/serbia",
         var recovered = data.recovered;
         var active = data.active;
         var critical = data.critical;
-        // var casesPerOneMillion = data.casesPerOneMillion;
 
         $(".badge1").append(cases);
         $(".badge2").append(todayCases);
@@ -17,8 +15,6 @@ $.getJSON( "https://corona.lmao.ninja/countries/serbia",
         $(".badge5").append(recovered);
         $(".badge6").append(active);
         $(".badge7").append(critical);
-        // $(".badge8").append(casesPerOneMillion);
-
     }
 );
 
