@@ -1,4 +1,4 @@
-$.getJSON( "https://coronavirus-19-api.herokuapp.com/countries/serbia",
+$.getJSON( "https://corona.lmao.ninja/countries/serbia",
     function( data ) {
         console.log(data);
         var cases = data.cases;
@@ -22,7 +22,7 @@ $.getJSON( "https://coronavirus-19-api.herokuapp.com/countries/serbia",
     }
 );
 
-$.getJSON( "https://coronavirus-19-api.herokuapp.com/all",
+$.getJSON( "https://corona.lmao.ninja/all",
     function( data ) {
         var casesInWorld = data.cases;
         var deathsInWorld = data.deaths;
