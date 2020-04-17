@@ -18,7 +18,13 @@ $.getJSON( "https://corona.lmao.ninja/countries/serbia",
         $(".badge7").append(critical);
         $(".badge8").append(tests);
     }
-);
+).fail(function(jqXHR){
+        if(jqXHR.status == 410){
+                alert("Подаци нису тренутно доступни, молим Вас покушајте поново за пар минута.");
+        }else{
+                alert("Проблем са конекцијом, покушајте поново за пар минута.");
+        }
+});
 
 $.getJSON( "https://corona.lmao.ninja/all",
     function( data ) {
@@ -31,5 +37,3 @@ $.getJSON( "https://corona.lmao.ninja/all",
         $(".badge11").append(deathsInWorld);
     }
 );
-
-
