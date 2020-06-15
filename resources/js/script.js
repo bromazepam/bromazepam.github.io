@@ -1,4 +1,4 @@
-$.getJSON( "https://disease.sh/v2/countries/serbia",
+$.getJSON( "https://corona.lmao.ninja/v2/countries/serbia",
     function( data ) {
         var tests = data.tests;
         var cases = data.cases;
@@ -26,7 +26,7 @@ $.getJSON( "https://disease.sh/v2/countries/serbia",
         }
 });
 
-$.getJSON( "https://disease.sh/v2/all",
+$.getJSON( "https://corona.lmao.ninja/v2/all",
     function( data ) {
         var casesInWorld = data.cases;
         var deathsInWorld = data.deaths;
