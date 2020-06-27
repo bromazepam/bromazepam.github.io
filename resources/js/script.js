@@ -8,6 +8,7 @@ $.getJSON( "https://corona.lmao.ninja/v2/countries/serbia",
         var recovered = data.recovered;
         var active = data.active;
         var critical = data.critical;
+        var todayRecovered = data.todayRecovered;
 
         $(".badge1").append(cases);
         $(".badge2").append(todayCases);
@@ -17,6 +18,7 @@ $.getJSON( "https://corona.lmao.ninja/v2/countries/serbia",
         $(".badge6").append(active);
         $(".badge7").append(critical);
         $(".badge8").append(tests);
+        $(".badge12").append(todayRecovered);
     }
 ).fail(function(jqXHR){
         if(jqXHR.status == 410){
