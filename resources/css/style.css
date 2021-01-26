@@ -18,6 +18,13 @@
     font-size: 22pt;
 }
 
+.form-1 h3 {
+    text-align: center;
+    margin-top: 8%;
+    margin-bottom: 8%;
+    color: #FFFFFF;
+}
+
 body {
     background: #005AA7; /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7); /* Chrome 10-25, Safari 5.1-6 */
