@@ -28,14 +28,30 @@ $.getJSON( "https://corona.lmao.ninja/v2/countries/serbia",
         }
 });
 
-$.getJSON( "https://corona.lmao.ninja/v2/all",
+// $.getJSON( "https://corona.lmao.ninja/v2/all",
+//     function( data ) {
+//         var casesInWorld = data.cases;
+//         var deathsInWorld = data.deaths;
+//         var recoveredInWorld = data.recovered;
+//
+//         $(".badge9").append(casesInWorld);
+//         $(".badge10").append(recoveredInWorld);
+//         $(".badge11").append(deathsInWorld);
+//     }
+// );
+$.getJSON( "https://disease.sh/v3/covid-19/vaccine/coverage/countries/serbia?lastdays=1",
     function( data ) {
-        var casesInWorld = data.cases;
-        var deathsInWorld = data.deaths;
-        var recoveredInWorld = data.recovered;
+            let obj = data.timeline;
+            var str = JSON.stringify(obj);
+            var subStr = str.substring(
+                str.lastIndexOf(":") + 1,
+                str.lastIndexOf("}")
+            );
 
-        $(".badge9").append(casesInWorld);
-        $(".badge10").append(recoveredInWorld);
-        $(".badge11").append(deathsInWorld);
+            var vaccinated = parseInt(subStr, 10);
+            console.log(str);
+            console.log(vaccinated);
+
+            $(".badge13").append(vaccinated);
     }
 );
