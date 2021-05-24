@@ -28,17 +28,6 @@ $.getJSON( "https://corona.lmao.ninja/v2/countries/serbia",
         }
 });
 
-// $.getJSON( "https://corona.lmao.ninja/v2/all",
-//     function( data ) {
-//         var casesInWorld = data.cases;
-//         var deathsInWorld = data.deaths;
-//         var recoveredInWorld = data.recovered;
-//
-//         $(".badge9").append(casesInWorld);
-//         $(".badge10").append(recoveredInWorld);
-//         $(".badge11").append(deathsInWorld);
-//     }
-// );
 $.getJSON( "https://disease.sh/v3/covid-19/vaccine/coverage/countries/serbia?lastdays=1",
     function( data ) {
             let obj = data.timeline;
