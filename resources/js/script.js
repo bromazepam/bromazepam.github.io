@@ -1,4 +1,4 @@
-$.getJSON( "https://corona.lmao.ninja/v2/countries/serbia",
+$.getJSON( "https://disease.sh/v3/covid-19/countries/serbia?strict=true",
     function( data ) {
         var tests = data.tests;
         var cases = data.cases;
@@ -28,7 +28,7 @@ $.getJSON( "https://corona.lmao.ninja/v2/countries/serbia",
         }
 });
 
-$.getJSON( "https://disease.sh/v3/covid-19/vaccine/coverage/countries/serbia?lastdays=1",
+$.getJSON( "https://disease.sh/v3/covid-19/vaccine/coverage/countries/serbia?lastdays=1&fullData=false",
     function( data ) {
             let obj = data.timeline;
             var str = JSON.stringify(obj);
@@ -36,11 +36,7 @@ $.getJSON( "https://disease.sh/v3/covid-19/vaccine/coverage/countries/serbia?las
                 str.lastIndexOf(":") + 1,
                 str.lastIndexOf("}")
             );
-
             var vaccinated = parseInt(subStr, 10);
-            console.log(str);
-            console.log(vaccinated);
-
             $(".badge13").append(vaccinated);
     }
 );
