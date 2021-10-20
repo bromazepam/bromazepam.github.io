@@ -21,7 +21,7 @@ $.getJSON( "https://disease.sh/v3/covid-19/countries/serbia?strict=true",
         $(".badge12").append(todayRecovered);
     }
 ).fail(function(jqXHR){
-        if(jqXHR.status == 410){
+        if(jqXHR.status === 410){
                 alert("Подаци нису тренутно доступни, молим Вас покушајте поново за пар минута.");
         }else{
                 alert("Проблем са конекцијом, покушајте поново за пар минута.");
